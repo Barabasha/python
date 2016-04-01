@@ -1,6 +1,5 @@
-import math
 
-phone_book = [{"name": "Dmytro", "age": 36}]
+phone_book = [{"name": "Dmytro", "age": 42}]
 
 
 def print_entry(entry):
