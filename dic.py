@@ -37,7 +37,7 @@ def main():
             print ""
             print ""
             print ""
-            print "~ Welcome to Dmitry Bogach phonebook ~"
+            print "~ Welcome to phonebook ~"
             print "Select one of actions below:"
             print "     1 - Print phonebook entries"
             print "     2 - Add new entry"
