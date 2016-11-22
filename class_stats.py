@@ -70,7 +70,7 @@ def update_students_results():
     Calculate student results and put it into the student dictionary under the key "rank"
     Total rank is calculated as a sum of completed hw tasks +
         sum of completed Test1 tasks weighted proportional to its costs
-        For example, student with id=1024 has total rank = 1*29 + (1*1 + 1*1 + 1*1 + ... 1*15 = 81))
+        For example, student with id=1024 has total rank = 1*29 + (1*1 + 1*1 + 1*1 + ... 1*15) = 81)
     :return: None
     '''
     pass
@@ -87,7 +87,7 @@ def print_students_info(sort_by_key="fullname"):
     Example:
         -----------------------------------------
         : ID:                               1025:
-        :                                       :
+        :.......................................:
         : Full name:                  Гамов Олег:
         : Email:             o.v.gamov@gmail.com:
         : Github:                      Aminazine:
