@@ -85,17 +85,15 @@ def print_students_info(sort_by_key="fullname"):
         - github account (only name, not URL path)
         - rank
     Example:
-        ----------------------------------------
-        : ID:                               1025
-        :
-        : Full name:                  Гамов Олег
-        : Email:             o.v.gamov@gmail.com
-        : Github:                      Aminazine
-        : Rank:                               23
-        ----------------------------------------
+        -----------------------------------------
+        : ID:                               1025:
+        :                                       :
+        : Full name:                  Гамов Олег:
+        : Email:             o.v.gamov@gmail.com:
+        : Github:                      Aminazine:
+        : Rank:                               23:
+        -----------------------------------------
 
     :return: None
     '''
     pass
-
-
