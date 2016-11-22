@@ -1,6 +1,6 @@
 import pickle
 
-phone_book = [{"surname": "Bogach", "name": "Dmytro", "age": 36}]
+phone_book = [{"surname": "Poroshenko", "name": "Petr", "age": 50}]
 
 def print_entry(number, entry):
     print "[ " + str(number) + " ]" + "-----------------"
