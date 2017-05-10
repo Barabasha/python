@@ -59,6 +59,8 @@ employee_2 = {"name":"Nick", "salary": 20000, "dep": "Sales"}
 employee_3 = {"name":"Sue",  "salary": 50000, "dep": "IT", "bonus":500}
 employee_4 = {"name":"Phil", "salary": 5000,  "dep": "BoardOfDirectors", "bonus":10000}
 
+employees = [employee_1, employee_2, employee_3, employee_4]
+
 print(person_1.get('bonus', 0))
 print(person_2.get('bonus', 100))
 # update bonus and salary
