@@ -61,7 +61,7 @@ employee_4 = {"name":"Phil", "salary": 5000,  "dep": "BoardOfDirectors", "bonus"
 
 print(person_1.get('bonus', 0))
 print(person_2.get('bonus', 100))
-
+# update bonus and salary
 
 # printing
 for key in person_1:
@@ -69,6 +69,9 @@ for key in person_1:
 
 for key in dict:
     print (key, "->", person_1[key])
+
+for key, value in dict.items():
+    print ("%s -> %s" % (key, value))
 
 for key in sorted(person_1):
     print (key, "->",  dict_planets[key])
