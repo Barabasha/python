@@ -31,7 +31,7 @@ physicits = [person_1, person_2]
 person_1['hobby'] = "painting"
 person_2['hobby'] = "violin"
 person_3['hobby'] = "pigeons"
-person_3['hobby'] = "electricity"
+person_3['hobby'] = "electricity" # second assignment overrides the 1st one
 
 person_3['wiki_url'] = "https://en.wikipedia.org/wiki/Nikola_Tesla"
 
@@ -79,15 +79,20 @@ for key in sorted(dict_planets, key=dict_planets.get):# reverse=True):
 # comprehension
 symbols = {chr(code): 0 for code in range(ord("a"), ord("z"))}
 
-# grouping
-print 'grouping (accumulating) values by keys'
-dic_accum = {}
-for element in list:
-    if element in dic_accum:
-        dic_accum[element] += 1
-    else:
-        dic_accum[element] = 1
-print dic_accum
+# practice
+# - letters frequency
+# - sort by keys/value
+# - top 5 letters
+
+# idiomatic python for incrementing values in dicts 
+if key in dict:
+    dict[key] += 1
+else:
+    dict[key] = 1
+
+<==>
+
+dict["key"]= dict.get("key", 0) + 1
 
 
 # advanced
