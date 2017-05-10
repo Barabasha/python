@@ -1,45 +1,83 @@
 epmty_dict = {}
 
+# initialization
 dict_vocab_en_es = {'world': 'mundo', 'language': 'idioma', 'See you later': 'Hasta la vista'}
 dict_planets = {'earth': 345778, 'mars': 47789, 'venus': 4679339}
 dict_planets_2 = {'earth': (345778, 894202), 'mars': (47789, 898902), 'venus': (4679339, 238000)}
+print(dict_planets)
 
+# real examples
 person_1 = {'name':'Richard Feynman',
-            'age': 47,
+            'age': 99,
             'birth_place': 'USA',
-            'birth_date': "1923-01-01",
+            'birth_date': "1918-01-01",
             'awards':['Nobel Prize in Phisics', 'USA Science Medal']}
 
 person_2 = {'name':'Albert Einstein',
             'age': 138,
             'birth_place': 'Germany',
             'birth_date': "1879-03-14",
-            'awards':['Nobel Prize in Phisics', 'PLank Medal']}
+            'awards':['Nobel Prize in Physics', 'Planck Medal']}
+
+person_2 = {'name':'Nicola Tesla',
+            'age': 161,
+            'birth_place': 'Croatia',
+            'birth_date': "1856-07-10",
+            'awards':['Edison Medal']}
+
+physicits = [person_1, person_2]
+
+# add new key-value pairs
+person_1['hobby'] = "painting"
+person_2['hobby'] = "violin"
+person_3['hobby'] = "pigeons"
+person_3['hobby'] = "electricity"
+
+person_3['wiki_url'] = "https://en.wikipedia.org/wiki/Nikola_Tesla"
+
+print(person_1)
+print(person_2)
+print(person_3)
+
+del person_1['age']
+print(person_1)
+
+# read value by key
+print(person_3['wiki_url'])
+print(person_2['wiki_url'])         # error
+print(person_1['wiki_url'])         # error with default
+
+# check existance
+if 'wiki' in person_3:
+    print(person_3['wiki_url'])
+else:
+    print("key 'wiki_url' is missing")
+
+# get with default
+employee_1 = {"name":"Alex", "salary": 10000, "dep": "Sales", "bonus":200}
+employee_2 = {"name":"Nick", "salary": 20000, "dep": "Sales"}
+employee_3 = {"name":"Sue",  "salary": 50000, "dep": "IT", "bonus":500}
+employee_4 = {"name":"Phil", "salary": 5000,  "dep": "BoardOfDirectors", "bonus":10000}
+
+print(person_1.get('bonus', 0))
+print(person_2.get('bonus', 100))
 
 
-d1 = dict(id=1948, name="Washer", size=3)
-d2 = {"id": 1948, "name": "Washer", "size": 3}
-list = ['a','a','a','b','b','b']
+# printing
+for key in person_1:
+    print (key)
 
-print 'add pair key-value'
-dic['d'] = 5
-print dic
+for key in dict:
+    print (key, "->", person_1[key])
+
+for key in sorted(person_1):
+    print (key, "->",  dict_planets[key])
+
+for key in sorted(dict_planets, key=dict_planets.get):# reverse=True):
+    print (key, "->",  dict_planets[key])
 
 # comprehension
 symbols = {chr(code): 0 for code in range(ord("a"), ord("z"))}
-
-# printing
-print 'print key - value pairs'
-for key in dic:
-    print key, dic[key]
-
-print 'sorted by keys'
-for key in sorted(dic):
-    print key, dic[key]
-
-print 'sorted by values'
-for key in sorted(dic, key=dic.get):# reverse=True):
-    print key, dic[key]
 
 # grouping
 print 'grouping (accumulating) values by keys'
