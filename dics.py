@@ -1,6 +1,22 @@
-dic = {'c': 2, 'a': 3, 'b': 1}
 epmty_dict = {}
-empty_dict2 = dict()
+
+dict_vocab_en_es = {'world': 'mundo', 'language': 'idioma', 'See you later': 'Hasta la vista'}
+dict_planets = {'earth': 345778, 'mars': 47789, 'venus': 4679339}
+dict_planets_2 = {'earth': (345778, 894202), 'mars': (47789, 898902), 'venus': (4679339, 238000)}
+
+person_1 = {'name':'Richard Feynman',
+            'age': 47,
+            'birth_place': 'USA',
+            'birth_date': "1923-01-01",
+            'awards':['Nobel Prize in Phisics', 'USA Science Medal']}
+
+person_2 = {'name':'Albert Einstein',
+            'age': 138,
+            'birth_place': 'Germany',
+            'birth_date': "1879-03-14",
+            'awards':['Nobel Prize in Phisics', 'PLank Medal']}
+
+
 d1 = dict(id=1948, name="Washer", size=3)
 d2 = {"id": 1948, "name": "Washer", "size": 3}
 list = ['a','a','a','b','b','b']
