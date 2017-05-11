@@ -1,24 +1,3 @@
-##import pyperclip
-##
-##
-##text = pyperclip.paste()
-##print(text)
-##
-##
-##students=[]
-##results=[]
-##
-##for line in text.split("\n"):
-##    if line[0] not in "01":
-##        students.append(line)
-##    else:
-##        results.append(",".join(line.split()))
-##
-##merged = zip(students, results)
-##for m in merged:
-##    print(m,",")
-
-
 import pickle
 
 phone_book = [
