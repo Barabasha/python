@@ -1,3 +1,24 @@
+##import pyperclip
+##
+##
+##text = pyperclip.paste()
+##print(text)
+##
+##
+##students=[]
+##results=[]
+##
+##for line in text.split("\n"):
+##    if line[0] not in "01":
+##        students.append(line)
+##    else:
+##        results.append(",".join(line.split()))
+##
+##merged = zip(students, results)
+##for m in merged:
+##    print(m,",")
+
+
 import pickle
 
 phone_book = [
@@ -6,15 +27,17 @@ phone_book = [
              ]
 
 def print_entry(number, entry):
-    print ("[ " + str(number) + " ]" + "-----------------")
-    print ("Surname:    " + entry["surname"])
-    print ("Name:    " + entry["name"])
-    print ("Age:     " + str(entry["age"]))
+    print ("--[ %s ]--------------------------" % number)
+    print ("| Surname: %20s |" % entry["surname"])
+    print ("| Name:    %20s |" % entry["name"])
+    print ("| Age:     %20s |" % entry["age"])
+    print ()
 
 
 def print_phonebook():
     print ()
-    print ("###### Phone book #######")
+    print ()
+    print ("#########  Phone book  ##########")
     print ()
 
     number = 1
@@ -80,26 +103,26 @@ def main():
     while True:
         user_input = ""
         try:
-            print ""
-            print ""
-            print ""
-            print "~ Welcome to phonebook ~"
-            print "Select one of actions below:"
-            print "     1 - Print phonebook entries"
-            print "     2 - Print phonebook entries (by age)"
-            print "     3 - Add new entry"
-            print "     4 - Find entry by name"
-            print "     5 - Find entry by age"
-            print "     6 - Delete entry by name"
-            print "     7 - The number of entries in the phonebook"
-            print "     8 - Avr. age of all persons"
-            print "     9 - Increase age"
-            print "-----------------------------"
-            print "     s - Save to file"
-            print "     l - Load from file"
-            print "     0 - Exit"
+            print ()
+            print ()
+            print ()
+            print ("~ Welcome to phonebook ~")
+            print ("Select one of actions below:")
+            print ("     1 - Print phonebook entries")
+            print ("     2 - Print phonebook entries (by age)")
+            print ("     3 - Add new entry")
+            print ("     4 - Find entry by name")
+            print ("     5 - Find entry by age")
+            print ("     6 - Delete entry by name")
+            print ("     7 - The number of entries in the phonebook")
+            print ("     8 - Avr. age of all persons")
+            print ("     9 - Increase age by num. of years")
+            print ("-----------------------------")
+            print ("     s - Save to file")
+            print ("     l - Load from file")
+            print ("     0 - Exit")
 
-            user_input = raw_input("Enter you choice: ")
+            user_input = input("Enter you choice: ")
             choice = int(user_input)
 
             if choice == 1:
@@ -107,31 +130,31 @@ def main():
             elif choice == 2:
                 print_phonebook_by_age()
             elif choice == 3:
-                surname = str(raw_input("    Enter surname: "))
-                name = str(raw_input("    Enter name: "))
-                age = int(raw_input("    Enter age: "))
+                surname = str(input("    Enter surname: "))
+                name = str(input("    Enter name: "))
+                age = int(input("    Enter age: "))
                 add_entry_phonebook(surname, name, age)
             elif choice == 4:
-                name = str(raw_input("    Enter name: "))
+                name = str(input("    Enter name: "))
                 find_entry_name_phonebook(name)
             elif choice == 5:
-                age = int(raw_input("    Enter age: "))
+                age = int(input("    Enter age: "))
                 find_entry_age_phonebook(age)
             elif choice == 6:
-                name = str(raw_input("    Enter name: "))
+                name = str(input("    Enter name: "))
                 delete_entry_name_phonebook(name)
             elif choice == 7:
                 count_all_entries_in_phonebook()
             elif choice == 8:
                 avr_age_of_all_persons()
             elif choice == 9:
-                nmbrs_of_years = int(raw_input("    Enter number of years: "))
+                nmbrs_of_years = int(raw_input("    Enter number of years to add to current ages: "))
                 increase_age(nmbrs_of_years)
             elif choice == 0:
-                print "Bye!"
+                print ("Bye!")
                 break
             else:
-                print "Enter action within range [0..9]"
+                print ("Enter action within range [0..9]")
 
         except ValueError:
             if str(user_input) == 's':
